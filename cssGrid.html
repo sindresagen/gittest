@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 20px 10fr 20px;
+            grid-template-areas: 'menu header'
+                                 'menu mainContent'
+                                 'footer footer';
+
+        }
+
+        div.footer {
+            background-color: aqua;
+            grid-area: footer;
+        }
+
+        div.header {
+            background-color: aquamarine;
+            grid-area: header;
+        }
+
+        div.menu {
+            background-color: blanchedalmond;
+            grid-area: menu;
+        }
+
+        div.mainContent {
+            background-color: lightgray;
+            grid-area: mainContent;
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.page {
+            grid-template-columns: 1fr;
+            grid-template-rows: 20px 1fr 4fr 20px;
+            grid-template-areas: 'header'
+                                 'menu'
+                                 'mainContent'
+                                 'footer';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="footer">Footer</div>
+        <div class="mainContent">MainContent</div>
+    </div>
+</body>
+
+</html>
